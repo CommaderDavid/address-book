@@ -5,11 +5,13 @@ $(document).ready(function() {
     var addressInput = $("input#address").val();
     var emailInput = $("input#email").val();
 
-    $("ul#contact").prepend(`<li>${nameInput}</li>`);
+
+    $("ul#contact").prepend(`<div class="contacts"><li>${nameInput}</li></div><div class="details"><li>${phoneInput}</li><li>${addressInput}</li><li>${emailInput}</li></div>`);
     // this creates and uses the variable with the nameInput. Remember (``)
 
-    $("nameInput").click(function() {
-      alert("this works");
+
+    $("div.contacts").click(function() {
+      $(".details").toggle();
     });
     // have almost everything. not sure where im stuck
 
